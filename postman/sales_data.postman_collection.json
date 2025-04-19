@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "88dac5ea-c068-4f37-9dde-deff240498f1",
+		"name": "sales_data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25908822"
+	},
+	"item": [
+		{
+			"name": "UploadAndProcessCSV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/sneha/Downloads/sales_data.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total_Revenue_by_products",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Total_Revenue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/revenue?start=01-01-2023&end=01-01-2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"revenue"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "01-01-2023"
+						},
+						{
+							"key": "end",
+							"value": "01-01-2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total_Revenue_by_category",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/revenue/by-category?start=01-01-2023&end=01-01-2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"revenue",
+						"by-category"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "01-01-2023"
+						},
+						{
+							"key": "end",
+							"value": "01-01-2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total_Revenue_By_Region",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/revenue/by-region?start=01-01-2023&end=01-01-2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"revenue",
+						"by-region"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "01-01-2023"
+						},
+						{
+							"key": "end",
+							"value": "01-01-2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total_Revenue_By_Trends",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/revenue/trends?start=01-01-2023&end=01-01-2024&interval=yearly",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"revenue",
+						"trends"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "01-01-2023"
+						},
+						{
+							"key": "end",
+							"value": "01-01-2024"
+						},
+						{
+							"key": "interval",
+							"value": "yearly"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
