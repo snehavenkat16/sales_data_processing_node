@@ -72,10 +72,11 @@ node server.js
 | Route                      | Method | Params / Body             | Description                         |
 |---------------------------|--------|---------------------------|-------------------------------------|
 | `/api/upload`             | POST   | Form-Data: `file` (CSV)   | Upload and process a CSV file       |
+| `/api/revenue`            | GET    | `start`, `end` (ISO date) | Total Revenue within a specific date|
 | `/api/revenue/by-product` | GET    | `start`, `end` (ISO date) | Revenue grouped by product          |
 | `/api/revenue/by-region`  | GET    | `start`, `end` (optional) | Revenue grouped by region           |
-| `/api/top-customers`      | GET    | `limit`, `start`, `end`   | Top customers by total spend        |
-| `/api/orders`             | GET    | `start`, `end` (optional) | Retrieve all orders in date range   |
+| `/api/revenue/by-category` | GET   | `start`, `end`   | Revenue grouped by category   |
+| `/api/revenue/trends`      | GET   | `start`, `end` ,interval | Revenue by trends based on certain intervals   |
 
 ---
 
